@@ -12,21 +12,14 @@ $smarty->assign('month',$_POST["month"]);
 $smarty->assign('year',$_POST["year"]);
 $smarty->assign('spot',$_POST["spot"]);
 $smarty->assign('timestart',$_POST["timestart"]);
-$smarty->assign('timeend',$_POST["timeend"]);
 
-// session_start();
-$smarty->assign('PHPSESSID',$_COOKIE["PHPSESSID"]);
-
-session_start();
-
-$smarty->assign('_SESSION',$_SESSION);
+$smarty->assign('tel',$_POST["tel"]);
+$smarty->assign('mail',$_POST["mail"]);
 
 
 
 
-session_destroy();
 
-
-$smarty->display("reserve_user.tpl");
+$smarty->display("reserve_confirm.tpl");
 
 ?>
