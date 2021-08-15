@@ -64,7 +64,7 @@
                 {html_image file='images/tennis.jpg' width="140" height="140" class="rounded-circle"}
                 <h2>予約</h2>
                 <p>いいいいいいいいいいいいいいいいいいいいいいいいい</p>
-                <p><a class="btn btn-secondary" href="http://160.251.51.15/sys/reserve.php" role="button">View details &raquo;</a></p>
+                <p><a class="btn btn-secondary" href="reserve.php" role="button">View details &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
                 {html_image file='images/tennis.jpg' width="140" height="140" class="rounded-circle"}

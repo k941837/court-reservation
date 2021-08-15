@@ -4,7 +4,7 @@ $smarty = new Smarty();
 
 
 //** 次の行のコメントをはずすと、デバッギングコンソールを表示します
-$smarty->debugging = true;
+//$smarty->debugging = true;
 
 
 $smarty->assign('test',2222);
