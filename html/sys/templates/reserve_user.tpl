@@ -1,10 +1,9 @@
 {include file='header.tpl' title='Main Page'}
 
-
 <style>
 
     main{
-        margin-top:100px;
+        margin-top:150px;
     }
 
     th{
@@ -15,8 +14,8 @@
 
 <main>
 
-    <div class="container">
-
+    <div class="container mb-5">
+        <h1>利用者情報入力</h1>
         <div class="aaa mb-5" style="border:solid 0.5px #333; padding: 10px;">
             必須アイコン は必須入力となります<br>
             ＜新規にご利用の方に＞<br>
@@ -32,9 +31,7 @@
             <span style="color:red">＜予約の取り消しについて＞</span><br>
             <span style="color:red">予約日の10日前までは、無料で取り消しいただけます。</span><br>
             <span style="color:red">9日前から当日までの取り消しには、コート料金が発生いたします。</span><br>
-
         </div>
-
 
         <table class="table table-bordered">
             <thead>
@@ -45,7 +42,7 @@
             <tbody>
                 <tr>
                     <th>&#x2611;電話番号</th>
-                    <td><input type="text"></td>
+                    <td><input type="text"><br>半角数字で入力してください。入力例、06-6325-2231</td>
                 </tr>
                 <tr>
                     <th>&#x2611;メールアドレス</th>
@@ -62,23 +59,98 @@
             </tbody>
         </table>
 
-
-
-        <div class="d-flex align-items-center ">
+        <div class="d-flex mb-5">
             <button type="submit" class="btn btn-primary mr-2">利用者情報で予約する</button>
             <button onclick="history.back()" class="btn btn-primary">戻る</button>
         </div>
 
 
+        <form action="reserve_confirm.php" method="post">
+            <table class="table table-bordered">
+                <tr>
+                    <th colspan="2" class="text-center">新規の方はこちら</th>
+                </tr>
+                <tr>
+                    <th>&#x2611;電話番号</th>
+                    <td><input type="text" name="tel"><br>半角数字で入力してください。入力例、06-6325-2231</td>
+                </tr>
+                <tr>
+                    <th>&#x2611;メールアドレス</th>
+                    <td><input type="text" name="mail"></td>
+                </tr>
+                <tr>
+                    <th>&#x2611;メールアドレス確認</th>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <th>&#x2611;電話番号</th>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <th>&#x2611;パスワード</th>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <th>&#x2611;パスワード確認</th>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <th>&#x2611;支払い方法</th>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <th>&#x2611;ニックネーム・チーム名</th>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <th>&#x2611;予約者名:漢字</th>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <th>予約者名:かな</th>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <th>郵便番号</th>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <th>市区町村番地</th>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <th>その他</th>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <th>性別</th>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <th>生年月日</th>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <th>その他連絡先</th>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <th>その他連絡先:電話番号</th>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <th>お問い合わせ</th>
+                    <td><input type="text"></td>
+                </tr>
+            </table>
+
+            <div class="d-flex mb-5">
+                <button type="submit" class="btn btn-primary mr-2">確認する</button>
+                <button onclick="history.back()" class="btn btn-primary">戻る</button>
+            </div>
+        </form>
 
     </div>
-
-
-
-
-    
-
-
 
 </main>
 
