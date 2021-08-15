@@ -192,7 +192,7 @@
             </tr>
             <tr>
                 <td class="text-center kunijima-tennis">人工芝(1)</td>
-                <td class="text-center">●</td>
+                <td class="text-center"><a href="reserve_time_select.php?year={$year}&month={$month}&day={$day}&spot=1&timestart=8">●</a></td>
                 <td class="text-center">●</td>
                 <td class="text-center">●</td>
                 <td class="text-center">●</td>
