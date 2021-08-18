@@ -14,17 +14,15 @@ $smarty->assign('spot',$_POST["spot"]);
 $smarty->assign('timestart',$_POST["timestart"]);
 $smarty->assign('timeend',$_POST["timeend"]);
 
-// session_start();
-$smarty->assign('PHPSESSID',$_COOKIE["PHPSESSID"]);
 
-session_start();
 
-$smarty->assign('_SESSION',$_SESSION);
+
+$smarty->assign('tel',$_POST["tel"]);
 
 
 
 
-session_destroy();
+
 
 
 $smarty->display("reserve_user.tpl");
