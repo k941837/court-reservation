@@ -33,6 +33,13 @@
             <span style="color:red">9日前から当日までの取り消しには、コート料金が発生いたします。</span><br>
         </div>
 
+
+        {if isset($infomation_text)}
+        {include file='infomation.tpl'
+            infomation_text = $infomation_text
+        }
+        {/if}
+
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -66,45 +73,75 @@
 
 
         <form action="reserve_confirm.php" method="post">
+            <input type="hidden" name="day" value="{$day}">
+            <input type="hidden" name="month" value="{$month}">
+            <input type="hidden" name="year" value="{$year}">
+            <input type="hidden" name="spot" value="{$spot}">
+            <input type="hidden" name="timestart" value="{$timestart}">
+            <input type="hidden" name="user_flg" value="0">
             <table class="table table-bordered">
                 <tr>
                     <th colspan="2" class="text-center">新規の方はこちら</th>
                 </tr>
                 <tr>
                     <th>&#x2611;電話番号</th>
-                    <td><input type="text" name="tel"><br>半角数字で入力してください。入力例、06-6325-2231</td>
+                    {if !empty($errorlist)}
+                        <td><input type="text" name="tel" value="{$errorlist.tel}"><br>半角数字で入力してください。入力例、06-6325-2231</td>
+                    {else}
+                        <td><input type="text" name="tel"><br>半角数字で入力してください。入力例、06-6325-2231</td>
+                    {/if}
                 </tr>
                 <tr>
                     <th>&#x2611;メールアドレス</th>
-                    <td><input type="text" name="mail"></td>
+                    {if !empty($errorlist)}
+                        <td><input type="text" name="mail" value="{$errorlist.mail}"></td>
+                    {else}
+                        <td><input type="text" name="mail"></td>
+                    {/if}
                 </tr>
                 <tr>
                     <th>&#x2611;メールアドレス確認</th>
-                    <td><input type="text"></td>
-                </tr>
-                <tr>
-                    <th>&#x2611;電話番号</th>
-                    <td><input type="text"></td>
+                    {if !empty($errorlist.mail-confirm)}
+                        <td><input type="text" name="mail-confirm" value="{$errorlist.mail-confirm}"></td>
+                    {else}
+                        <td><input type="text" name="mail-confirm"></td>
+                    {/if}
                 </tr>
                 <tr>
                     <th>&#x2611;パスワード</th>
-                    <td><input type="text"></td>
+                    {if !empty($errorlist)}
+                        <td><input type="text" name="password" value="{$errorlist.password}"></td>
+                    {else}
+                        <td><input type="text" name="password"></td>
+                    {/if}
                 </tr>
                 <tr>
                     <th>&#x2611;パスワード確認</th>
-                    <td><input type="text"></td>
+                    {if !empty($errorlist.password-confirm)}
+                        <td><input type="text" name="password-confirm" value="{$errorlist.password-confirm}"></td>
+                    {else}
+                        <td><input type="text" name="password-confirm"></td>
+                    {/if}
                 </tr>
                 <tr>
                     <th>&#x2611;支払い方法</th>
-                    <td><input type="text"></td>
+                    <td>受付払い</td>
                 </tr>
                 <tr>
                     <th>&#x2611;ニックネーム・チーム名</th>
-                    <td><input type="text"></td>
+                    {if !empty($errorlist)}
+                        <td><input type="text" name="nickname" value="{$errorlist.nickname}"></td>
+                    {else}
+                        <td><input type="text" name="nickname"></td>
+                    {/if}
                 </tr>
                 <tr>
                     <th>&#x2611;予約者名:漢字</th>
-                    <td><input type="text"></td>
+                    {if !empty($errorlist)}
+                        <td><input type="text" name="name" value="{$errorlist.name}"></td>
+                    {else}
+                        <td><input type="text" name="nickname"></td>
+                    {/if}
                 </tr>
                 <tr>
                     <th>予約者名:かな</th>

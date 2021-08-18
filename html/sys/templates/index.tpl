@@ -127,6 +127,18 @@
 
         <!-- /END THE FEATURETTES -->
 
+
+
+
+        <div class="container" style="height: 500px;">
+            <h2>最新テニス情報</h2>
+
+
+            {$vvv}
+        </div>
+
+
+
     </div><!-- /.container -->
 </main>
 
