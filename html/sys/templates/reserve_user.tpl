@@ -30,7 +30,7 @@
             ※ここでの入力情報は、この予約だけに適用されます。継続利用される 場合、先に利用者登録をお願いいたします。<br><br>
             <span style="color:red">＜予約の取り消しについて＞</span><br>
             <span style="color:red">予約日の10日前までは、無料で取り消しいただけます。</span><br>
-            <span style="color:red">9日前から当日までの取り消しには、コート料金が発生いたします。</span><br>
+            <span style="color:red">10日前から当日までの取り消しには、コート料金が発生いたします。</span><br>
         </div>
 
 
