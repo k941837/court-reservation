@@ -57,8 +57,8 @@
             <div class="col-lg-4">
                 {html_image file='images/tennis.jpg' width="140" height="140" class="rounded-circle"}
                 <h2>利用案内</h2>
-                <p>ああああああああああああああああああ</p>
-                <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                <p>AWS API練習</p>
+                <p><a class="btn btn-secondary" href="awspage.php" role="button">View details &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
                 {html_image file='images/tennis.jpg' width="140" height="140" class="rounded-circle"}
